@@ -1,0 +1,23 @@
+from scipy.sparse import csr_matrix, coo_matrix
+
+# Create sparse matrices
+A = csr_matrix([[1, 0, 0], [0, 2, 0], [0, 0, 3]])
+B = coo_matrix([[0, 0, 1], [0, 2, 0], [3, 0, 0]])
+
+# Analyze functions
+print("Matrix A:")
+print(A.toarray())
+print("Matrix B:")
+print(B.toarray())
+
+print("Matrix A transpose:")
+print(A.transpose().toarray())
+
+print("Matrix B shape:")
+print(B.shape)
+
+print("Matrix A nonzero elements:")
+print(A.nnz)
+
+print("Matrix B density:")
+print(B.getnnz() / (B.shape[0] * B.shape[1]))
