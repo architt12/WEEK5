@@ -1,0 +1,8 @@
+import numpy as np
+from scipy import io
+
+array = np.ones((4, 4))
+np.savetxt('test.txt', array)
+
+loaded_array = np.loadtxt('test.txt')
+print(loaded_array)
